@@ -1,0 +1,18 @@
+<form (ngSubmit)="onSubmit(postForm)" #postForm="ngForm">
+  <div class="input-group mb-3">
+    <input type="text" name="title" ngModel #title="ngModel" required class="form-control" placeholder="New post" aria-label="New post">
+    <div class="input-group-append">
+      <button class="btn btn-primary" type="submit">Add</button>
+    </div>
+  </div>
+</form>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let post of posts">
+    {{ post.title }}
+    <span class="float-right">
+        <button (click)="deletePost(post)" type="button" class="btn btn-danger">
+          <span class="fa fa-trash-o fa-lg" aria-hidden="true"></span>
+        </button>
+    </span>
+  </li>
+</ul>
