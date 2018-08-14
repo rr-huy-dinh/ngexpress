@@ -1,4 +1,4 @@
-FROM johnpapa/angular-cli
+FROM huydinhq/alpine-node-angular
 
 WORKDIR /app
 COPY . .
