@@ -1,9 +1,7 @@
-FROM mhart/alpine-node:8
+FROM johnpapa/angular-cli
 
 WORKDIR /app
 COPY . .
-
-RUN npm install -g @angular/cli
 
 RUN cd frontend && npm install && ng build
 
