@@ -1,16 +1,20 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
   <a class="navbar-brand" routerLink="home">Angular & Express</a>
-  <div class="collapse navbar-collapse">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
       <li routerLinkActive="nav-item active">
-          <a routerLink="home" class="nav-link">Home</a>
+        <a routerLink="home" class="nav-link">Home</a>
       </li>
       <li routerLinkActive="nav-item active">
-          <a routerLink="post" class="nav-link">Post</a>
+        <a routerLink="post" class="nav-link">Post</a>
       </li>
     </ul>
-  </div>  
+  </div>
 </nav>
+
 <main role="main" class="container">
-    <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </main>

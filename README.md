@@ -30,7 +30,7 @@ MONGODB_URI=<MONGODB_URI> npm start
 
 ```
 docker build -t ngexpress .
-docker run -p 3000:3000 ngexpress
+docker run -p 3000:3000 --env="MONGODB_URI=<MONGODB_URI>" ngexpress
 ```
 
 The docker image `ngexpress` is ready for deployment. You can check the app at http://localhost:3000
